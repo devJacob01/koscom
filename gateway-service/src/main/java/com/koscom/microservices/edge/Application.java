@@ -1,4 +1,4 @@
-package pl.piomin.microservices.edge;
+package com.koscom.microservices.edge;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

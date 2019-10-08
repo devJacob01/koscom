@@ -1,4 +1,4 @@
-package pl.piomin.microservices.customer.api;
+package com.koscom.microservices.customer.api;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import pl.piomin.microservices.customer.intercomm.AccountClient;
-import pl.piomin.microservices.customer.model.Account;
-import pl.piomin.microservices.customer.model.Customer;
-import pl.piomin.microservices.customer.model.CustomerType;
+import com.koscom.microservices.customer.intercomm.AccountClient;
+import com.koscom.microservices.customer.model.Account;
+import com.koscom.microservices.customer.model.Customer;
+import com.koscom.microservices.customer.model.CustomerType;
+
+
 
 @RestController
 public class CustomerApi {

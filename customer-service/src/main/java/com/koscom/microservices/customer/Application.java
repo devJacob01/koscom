@@ -1,4 +1,4 @@
-package pl.piomin.microservices.customer;
+package com.koscom.microservices.customer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package pl.piomin.microservices.customer.model;
+package com.koscom.microservices.customer.model;
 
 public enum CustomerType {
 

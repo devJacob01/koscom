@@ -1,4 +1,4 @@
-package pl.piomin.microservices.customer.api;
+package com.koscom.microservices.customer.api;
 
 
 
