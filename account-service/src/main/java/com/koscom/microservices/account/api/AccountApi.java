@@ -1,4 +1,4 @@
-package pl.piomin.microservices.account.api;
+package com.koscom.microservices.account.api;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.koscom.microservices.account.model.Account;
+
 import io.swagger.annotations.ApiOperation;
-import pl.piomin.microservices.account.model.Account;
 
 @RestController
 @RequestMapping("/accounts")

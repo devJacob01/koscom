@@ -1,4 +1,4 @@
-package pl.piomin.microservices.account;
+package com.koscom.microservices.account;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

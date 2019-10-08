@@ -1,4 +1,4 @@
-package pl.piomin.microservices.account.model;
+package com.koscom.microservices.account.model;
 
 public class Account {
 
