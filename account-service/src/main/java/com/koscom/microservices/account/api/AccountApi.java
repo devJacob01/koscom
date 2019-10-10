@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.koscom.microservices.account.model.Account;
@@ -34,19 +35,19 @@ public class AccountApi {
 	}
 	
 	@ApiOperation(value ="accounts 상세 ")
-	@RequestMapping("/number/{number}")
+	@RequestMapping(value="/number/{number}", method=RequestMethod.GET)
 	public Account findByNumber(@PathVariable("number") String number) {
 		logger.info(String.format("Account.findByNumber(%s)", number));
 		return accounts.stream().filter(it -> it.getNumber().equals(number)).findFirst().get();
 	}
 	
-	@RequestMapping("/customer/{customer}")
+	@RequestMapping(value="/customer/{customer}", method=RequestMethod.GET)
 	public List<Account> findByCustomer(@PathVariable("customer") Integer customerId) {
 		logger.info(String.format("Account.findByCustomer(%s)", customerId));
 		return accounts.stream().filter(it -> it.getCustomerId().intValue()==customerId.intValue()).collect(Collectors.toList());
 	}
 	
-	@RequestMapping("/list")
+	@RequestMapping(value="/list", method=RequestMethod.GET)
 	public List<Account> findAll() {
 		logger.info("Account.findAll()");
 		return accounts;

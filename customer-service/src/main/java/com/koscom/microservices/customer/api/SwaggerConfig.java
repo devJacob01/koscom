@@ -32,7 +32,7 @@ public class SwaggerConfig  {
 	        return new Docket(DocumentationType.SWAGGER_2)
 	                .apiInfo(apiInfo())
 	                .select()
-	                .apis(RequestHandlerSelectors.basePackage("pl.piomin.microservices.customer.api"))
+	                .apis(RequestHandlerSelectors.basePackage("com.koscom.microservices.customer.api"))
 	                .paths(PathSelectors.any())
 	                .build();
 	    }
