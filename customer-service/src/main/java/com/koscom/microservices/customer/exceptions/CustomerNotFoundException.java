@@ -7,8 +7,8 @@ public class CustomerNotFoundException extends Exception {
 
 	private static final long serialVersionUID = 1L;
 	
-	public CustomerNotFoundException(String pesel) {
-		super("No such customer: " + pesel);
+	public CustomerNotFoundException(String ex) {
+		super("No such customer: " + ex);
 	}
 	
 }

@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.koscom.microservices.customer.intercomm.AccountClient;
@@ -34,19 +35,19 @@ public class CustomerApi {
 		customers.add(new Customer(4, "12348", "Karolina Lewandowska", CustomerType.INDIVIDUAL));
 	}
 	
-	@RequestMapping("/customers/pesel/{pesel}")
+	@RequestMapping(value="/customers/pesel/{pesel}",method=RequestMethod.GET)
 	public Customer findByPesel(@PathVariable("pesel") String pesel) {
 		logger.info(String.format("Customer.findByPesel(%s)", pesel));
 		return customers.stream().filter(it -> it.getPesel().equals(pesel)).findFirst().get();	
 	}
 	
-	@RequestMapping("/customers")
+	@RequestMapping(value="/list" ,method=RequestMethod.GET)
 	public List<Customer> findAll() {
 		logger.info("Customer.findAll()");
 		return customers;
 	}
 	
-	@RequestMapping("/customers/{id}")
+	@RequestMapping(value = "/customers/{id}",method=RequestMethod.GET)
 	public Customer findById(@PathVariable("id") Integer id) {
 		logger.info(String.format("Customer.findById(%s)", id));
 		Customer customer = customers.stream().filter(it -> it.getId().intValue()==id.intValue()).findFirst().get();

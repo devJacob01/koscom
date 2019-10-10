@@ -1,5 +1,4 @@
-package com.koscom.microservices.customer.api;
-
+package com.koscom.microservices.user.api;
 
 
 
@@ -32,15 +31,15 @@ public class SwaggerConfig  {
 	        return new Docket(DocumentationType.SWAGGER_2)
 	                .apiInfo(apiInfo())
 	                .select()
-	                .apis(RequestHandlerSelectors.basePackage("com.koscom.microservices.customer"))
+	                .apis(RequestHandlerSelectors.basePackage("com.koscom.microservices.user.api"))
 	                .paths(PathSelectors.any())
 	                .build();
 	    }
 	 
 	    private ApiInfo apiInfo() {
 	        return new ApiInfoBuilder()
-	                .title("Customer Rest API")
-	                .description("Customer 서비스의 Rest API 입니다. ")
+	                .title("User Rest API")
+	                .description("user 서비스의 Rest API 입니다. ")
 	                .build();
 	 
 	    }
